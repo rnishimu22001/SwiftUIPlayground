@@ -13,6 +13,7 @@
 		5A3F8AD324E797F5000AC3E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A3F8AD224E797F5000AC3E5 /* Assets.xcassets */; };
 		5A3F8AD624E797F5000AC3E5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A3F8AD524E797F5000AC3E5 /* Preview Assets.xcassets */; };
 		5A3F8AD924E797F5000AC3E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A3F8AD724E797F5000AC3E5 /* LaunchScreen.storyboard */; };
+		5A3F8AE124E79896000AC3E5 /* ZStackPlaygroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F8AE024E79896000AC3E5 /* ZStackPlaygroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5A3F8AD524E797F5000AC3E5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5A3F8AD824E797F5000AC3E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A3F8ADA24E797F5000AC3E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A3F8AE024E79896000AC3E5 /* ZStackPlaygroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZStackPlaygroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				5A3F8AD224E797F5000AC3E5 /* Assets.xcassets */,
 				5A3F8AD724E797F5000AC3E5 /* LaunchScreen.storyboard */,
 				5A3F8ADA24E797F5000AC3E5 /* Info.plist */,
+				5A3F8AE024E79896000AC3E5 /* ZStackPlaygroundView.swift */,
 				5A3F8AD424E797F5000AC3E5 /* Preview Content */,
 			);
 			path = SwiftUIPlayground;
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A3F8ACD24E797EF000AC3E5 /* AppDelegate.swift in Sources */,
+				5A3F8AE124E79896000AC3E5 /* ZStackPlaygroundView.swift in Sources */,
 				5A3F8ACF24E797EF000AC3E5 /* SceneDelegate.swift in Sources */,
 				5A3F8AD124E797EF000AC3E5 /* ContentView.swift in Sources */,
 			);
