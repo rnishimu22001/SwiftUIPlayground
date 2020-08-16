@@ -54,8 +54,8 @@ struct LabelRowDisplayData {
 
 struct LabelDisplayData: Identifiable {
     let id = UUID()
+    /// 塗り潰すセルの範囲
     let range: Range<Int>
-    let maxCount = 5
     let colorLabel: ColorLabelDisplayData
     let shouldShow: Bool
 }
@@ -80,6 +80,7 @@ struct ColorLabel: View {
     }
 }
 
+/// ラベルの行を表示するView
 struct LabelRow: View {
     
     var rowDisplayData: LabelRowDisplayData
@@ -88,12 +89,19 @@ struct LabelRow: View {
         GeometryReader { geometory in
             HStack {
                 ForEach (self.rowDisplayData.labels) { data in
+                    // 表示する場合はColorLabel、表示させない場合はSpacerを入れる
                     if data.shouldShow {
                         ColorLabel(displayData: data.colorLabel)
-                            .frame(width: self.width(in: geometory, range: data.range, maxCount: data.maxCount), alignment: .leading)
+                            .frame(width: self.width(in: geometory,
+                                                     range: data.range,
+                                                     maxCount: LabelGridDisplayData.numberOfCell),
+                                   alignment: .leading)
                     } else {
                         Spacer()
-                            .frame(width: self.width(in: geometory, range: data.range, maxCount: data.maxCount), alignment: .leading)
+                            .frame(width: self.width(in: geometory,
+                                                     range: data.range,
+                                                     maxCount: LabelGridDisplayData.numberOfCell),
+                                   alignment: .leading)
                     }
                 }
             }
@@ -102,23 +110,29 @@ struct LabelRow: View {
 }
 
 extension LabelRow {
+    
+    /// Labelの横幅を計算する
+    /// - Parameters:
+    ///   - geometory: LabelRowのレイアウト情報を持っているGeomeotry
+    ///   - range: Lableで塗りつぶしたいセルの範囲
+    ///   - maxCount: LabelRowで表示できるセルの数
+    /// - Returns: Labelに割り当てる横幅
     func width(in geometory: GeometryProxy, range: Range<Int>, maxCount: Int) -> CGFloat {
         return geometory.size.width / CGFloat(maxCount) * CGFloat(range.count)
     }
 }
 
+/// ラベルの行列を表示するView
 struct LabelGrid: View {
     
     var gridDisplayData: LabelGridDisplayData
     
     var body: some View {
-        VStack {
-            VStack (alignment: .center, spacing: 4) {
-                ForEach (0..<gridDisplayData.rows.count) { index in
-                    LabelRow(rowDisplayData: self.gridDisplayData.rows[index])
-                }
+        // 行を積み上げて、行列にする
+        VStack (alignment: .center, spacing: 4) {
+            ForEach (0..<gridDisplayData.rows.count) { index in
+                LabelRow(rowDisplayData: self.gridDisplayData.rows[index])
             }
-            Spacer()
         }
     }
 }
@@ -129,9 +143,9 @@ struct GeometoryPlaygroundView: View {
     
     var body: some View {
         ZStack {
+            // Cellを配置する親ViewとLabelを貼り付ける親Viewを同一階層に配置する
             HStack {
-                ForEach (0..<5) { _ in
-                    
+                ForEach (0..<LabelGridDisplayData.numberOfCell) { _ in
                     Cell()
                 }
             }
