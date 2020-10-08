@@ -15,6 +15,7 @@
 		5A3F8AD624E797F5000AC3E5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A3F8AD524E797F5000AC3E5 /* Preview Assets.xcassets */; };
 		5A3F8AD924E797F5000AC3E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A3F8AD724E797F5000AC3E5 /* LaunchScreen.storyboard */; };
 		5A3F8AE124E79896000AC3E5 /* GeometoryPlaygroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F8AE024E79896000AC3E5 /* GeometoryPlaygroundView.swift */; };
+		5A91AEBE252F4F5200B1BED9 /* RemoveThreePointLeaderPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A91AEBD252F4F5200B1BED9 /* RemoveThreePointLeaderPlayground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		5A3F8AD824E797F5000AC3E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A3F8ADA24E797F5000AC3E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A3F8AE024E79896000AC3E5 /* GeometoryPlaygroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometoryPlaygroundView.swift; sourceTree = "<group>"; };
+		5A91AEBD252F4F5200B1BED9 /* RemoveThreePointLeaderPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveThreePointLeaderPlayground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				5A3F8ADA24E797F5000AC3E5 /* Info.plist */,
 				5A3F8AE024E79896000AC3E5 /* GeometoryPlaygroundView.swift */,
 				5A0822F224E8E662005D8290 /* ZStackPlaygroundView.swift */,
+				5A91AEBD252F4F5200B1BED9 /* RemoveThreePointLeaderPlayground.swift */,
 				5A3F8AD424E797F5000AC3E5 /* Preview Content */,
 			);
 			path = SwiftUIPlayground;
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A3F8ACD24E797EF000AC3E5 /* AppDelegate.swift in Sources */,
+				5A91AEBE252F4F5200B1BED9 /* RemoveThreePointLeaderPlayground.swift in Sources */,
 				5A3F8AE124E79896000AC3E5 /* GeometoryPlaygroundView.swift in Sources */,
 				5A3F8ACF24E797EF000AC3E5 /* SceneDelegate.swift in Sources */,
 				5A0822F324E8E662005D8290 /* ZStackPlaygroundView.swift in Sources */,
